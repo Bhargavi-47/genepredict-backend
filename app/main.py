@@ -7,7 +7,7 @@ from slowapi.errors import RateLimitExceeded
 
 from app.config import get_settings
 from app.database import Base, engine
-from app.routers import auth, patients, mutations, predictions, reports, users, admin
+from app.routers import auth, patients, mutations, predictions, reports, users, admin, uploads
 
 settings = get_settings()
 
@@ -51,3 +51,4 @@ app.include_router(mutations.router)
 app.include_router(predictions.router)
 app.include_router(reports.router)
 app.include_router(admin.router)
+app.include_router(uploads.router)
